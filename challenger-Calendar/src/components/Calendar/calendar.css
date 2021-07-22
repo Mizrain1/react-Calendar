@@ -1,0 +1,110 @@
+.header {
+    width: auto;
+    padding: 0.5em 0;
+    background: rgb(238,238,238);
+    background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(197,197,203,0.9461206896551724) 60%);
+    border-right-style: solid;
+    border-left-style: solid;
+    border-color: #484848;
+    border-width: 3px;
+}
+
+.icon {
+    display: inline-block;
+}
+
+.calendar {
+    display: block;
+    width: 700px;
+    height: auto;
+}
+.calendar .header .icon:hover {
+    transform: scale(1.75);
+    color: dodgerblue;
+}
+.calendar .days {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: .70em 0;
+    background: rgb(72,72,72);
+    background: linear-gradient(90deg, rgba(72,72,72,1) 0%, rgba(33,33,33,0.9698275862068966) 53%, rgba(0,0,0,1) 92%);
+}
+.calendar .body .oneD {
+    position: relative;
+    height: 6em;
+    border-right: 1px solid #c5c5cb;
+    background: #ffffff;
+    overflow-y: auto;    
+}
+.calendar .body .oneD:hover {
+    background: skyblue;
+}
+.calendar .body .row {
+    border-bottom: 1px solid #c5c5cb;
+}
+.calendar .body .row:last-child {
+    border-bottom: none;
+}
+.calendar .body .oneD:last-child {
+    border-right: none;
+}
+.calendar .body .oneD .number {
+    position: absolute;
+    font-size: 80%;
+    line-height: 1;
+    top: .70em;
+    right: .70em;
+    font-weight: 600;
+}
+.calendar .body .disabled {
+    color: grey;
+}
+.calendar .body .weekend {
+    background: #ffffff;
+}
+
+.reminder {
+    font-size: 80%;
+    top: .70em;
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 10%;
+    word-wrap: break-word;
+    z-index: 1;
+}
+
+.calendar .body .oneD:hover .number, .calendar .body .selected .number {
+    background: rgb(161, 47, 255)
+}
+
+.delete {  
+    width: 200px;
+    background-color: red;
+    border-color: red;
+}
+.delete:hover {
+    border-color: #d50000;
+    background-color: #d50000;
+}
+
+.colDelete {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0.5em;
+}
+
+@media (max-width: 800px)
+{
+    .calendar {
+    width: 500px;
+   }
+   .calendar .days {
+       font-size: 10px;
+   }
+}
+
+
+
